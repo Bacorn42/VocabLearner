@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-   <router-view></router-view>
+   <router-view :words="words"></router-view>
   </div>
 </template>
 
 <script>
+import Word from './word.js'
 export default {
   name: 'app',
-  components: {
-  },
   data() {
     return {
-      words: ['hello', 'test']
+      words: [
+        new Word('This word is a greeting', ['hello', 'hi', 'yo']), 
+        new Word('How is "dog" in German?', ['Hund'])
+        ]
     }
-  }
+  },
 }
 </script>
 

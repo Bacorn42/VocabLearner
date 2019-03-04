@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/">Back</router-link> <br>
+    <router-link to="/"><button>Back</button></router-link> <br>
     Here you will be able to practice your words!
   </div>
 </template>
