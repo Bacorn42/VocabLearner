@@ -1,29 +1,5 @@
-# vocablearner
+# VocabLearner
 
-## Project setup
-```
-npm install
-```
+A VueJS project that also uses vue-router.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The app is a vocabulary trainer where the user can add their own words and translations as well as organise them into sets to practice.
