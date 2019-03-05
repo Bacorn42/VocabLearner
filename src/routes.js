@@ -1,9 +1,11 @@
 import Home from './components/Home.vue'
-import Edit from './components/Edit.vue'
+import Manage from './components/Manage.vue'
 import Practice from './components/Practice.vue'
+import Add from './components/Add.vue'
 
 export default [
   { path: '/', component: Home },
-  { path: '/edit', component: Edit },
-  { path: '/practice', component: Practice }
+  { path: '/manage', component: Manage },
+  { path: '/practice', component: Practice },
+  { path: '/add', component: Add }
 ]

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <router-link to="/"><button class="btn btn-outline-primary mt-3">Back</button></router-link>
+    <router-link to="/"><button class="btn btn-outline-primary mt-3">Back</button></router-link> <br>
+    <router-link to="/add"><button class="btn btn-outline-primary mt-3">Add</button></router-link>
     <div class="container">
       Words:
       <ul class="list-group">
@@ -18,7 +19,9 @@
 
 <script>
 export default {
-  name: 'edit',
-  props: ['words']
+  name: 'manage',
+  props: {
+    words: Array
+  }
 }
 </script>

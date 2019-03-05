@@ -4,7 +4,7 @@
     <p>What would you like to do?</P>
     <div class="container">
       <router-link to="/practice"><button class="btn btn-outline-primary ml-3">Practice words</button></router-link>
-      <router-link to="/edit"> <button class="btn btn-outline-primary ml-3">Edit words</button></router-link>
+      <router-link to="/manage"> <button class="btn btn-outline-primary ml-3">Manage words</button></router-link>
     </div>
   </div>
 </template>
