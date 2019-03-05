@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <router-link to="/"><button>Back</button></router-link> <br>
-    Here you will be able to practice your words!
+  <div class="container">
+    <router-link to="/"><button class="btn btn-outline-primary mt-3">Back</button></router-link> <br>
+    <p>Here you will be able to practice your words!</p>
   </div>
 </template>
 
