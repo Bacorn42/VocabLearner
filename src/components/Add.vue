@@ -5,15 +5,20 @@
     <div class="alert alert-success" v-if="success">Added word!</div>
     <p>Add some words!</p>
     <form @submit="addWord" id="wordForm">
-      <div class="container border rounded p-3">
+      <div class="container border border-3 rounded p-3">
         <div class="form-group">
           <label for="clue">Clue</label>
           <input type="text" name="clue" placeholder="Clue" class="form-control" v-model="clue">
         </div>
         <div class="form-group">
           <label for="answers">Answers</label>
-          <div v-for="(answer, index) in answers" v-bind:key="index">{{ answer }}</div>
-          <div class="input-group">
+          <div class="border rounded p-2 mb-1" v-for="(answer, index) in answers" v-bind:key="index">
+              {{ answer }}
+              <button class="close" type="button" @click="removeAnswer(index)">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <div class="input-group mt-3">
             <input type="text" name="answers" placeholder="Answer" class="form-control" v-model="answer">
             <button class="btn btn-outline-primary ml-3" @click="addAnswer" type="button">Add answer</button>
           </div>
@@ -70,6 +75,9 @@ export default {
         this.errors.push("An answer must be provided!")
       }
     },
+    removeAnswer(index) {
+      this.answers.splice(index, 1)
+    },
     resetForm() {
       this.answers = []
       this.clue = ""
@@ -78,3 +86,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.border-3 {
+  border-width: 3px !important;
+}
+</style>
