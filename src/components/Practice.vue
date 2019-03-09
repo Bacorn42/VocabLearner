@@ -7,7 +7,7 @@
       <div v-for="(answer, index) in prevWord.answers" v-bind:key="index">{{ answer }}</div>
     </div>
     <div v-if="success" class="alert alert-success">Correct!</div>
-    <p>Here you will be able to practice your words!</p>
+    <p>You are practicing set {{ set.name }}.</p>
     <form @submit="checkAnswer">
       <div class="container border rounded p-3">
         <div class="form-group">
@@ -27,7 +27,8 @@
 export default {
   name: 'pracitce',
   props: {
-    words: Array
+    words: Array,
+    sets: Array
   },
   data() {
     return {
@@ -36,10 +37,13 @@ export default {
       failure: false,
       answer: '',
       word: {},
-      prevWord: {}
+      prevWord: {},
+      id: this.$route.params.id,
+      set: {}
     }
   },
   created() {
+    this.set = this.sets[this.id]
     this.generateNewWord()
   },
   methods: {
@@ -66,8 +70,8 @@ export default {
       this.prevWord = this.word
       this.tries = 3
       this.answer = ''
-      let index = Math.floor(Math.random() * this.words.length)
-      this.word = this.words[index]
+      let index = Math.floor(Math.random() * this.set.setWords.length)
+      this.word = this.set.setWords[index]
     }
   }
 }

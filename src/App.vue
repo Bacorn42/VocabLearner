@@ -13,10 +13,6 @@ export default {
       words: [],
       sets: []
     }
-  },
-  created() {
-    for(let i = 0; i < 20; i++)
-      this.words.push(new Word('clue' + i, ['ans1', 'ans2']))
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <input class="mb-3" type="text" v-model="query" placeholder="Search clue">
-    <div class="border rounded mb-1" v-for="(result, index) in filterWords(indexedWords, query)" v-bind:key="index" @click="resultClicked(result.index)">
+    <div class="border rounded mb-1 p-1" v-for="(result, index) in filterWords(indexedWords, query)" v-bind:key="index" @click="resultClicked(result.index)">
       {{ result.clue }}
     </div>
   </div>
