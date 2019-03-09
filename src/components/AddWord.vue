@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <router-link to="/manage"><button class="btn btn-outline-primary mt-3 mb-3">Back</button></router-link>
+    <router-link to="/manageWords"><button class="btn btn-outline-primary mt-3 mb-3">Back</button></router-link>
     <div v-for="(error, index) in errors" v-bind:key="index" class="alert alert-danger">{{ error }}</div>
     <div class="alert alert-success" v-if="success">Added word!</div>
     <p>Add some words!</p>
@@ -11,7 +11,7 @@
 <script>
 import WordForm from './WordForm.vue'
 export default {
-  name: 'add',
+  name: 'addWord',
   components: {
     WordForm
   },
@@ -50,9 +50,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.border-3 {
-  border-width: 3px !important;
-}
-</style>

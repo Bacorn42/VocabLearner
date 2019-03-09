@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'wordsearch',
+  name: 'wordSearch',
   props: {
     words: Array
   },

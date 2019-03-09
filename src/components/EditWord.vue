@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <router-link to="/manage"><button class="btn btn-outline-primary mt-3 mb-3">Back</button></router-link>
+    <router-link to="/manageWords"><button class="btn btn-outline-primary mt-3 mb-3">Back</button></router-link>
     <div v-for="(error, index) in errors" v-bind:key="index" class="alert alert-danger">{{ error }}</div>
     <div class="alert alert-success" v-if="success">Edited word!</div>
     <p>Edit the word!</p>
@@ -11,7 +11,7 @@
 <script>
 import WordForm from './WordForm.vue'
 export default {
-  name: 'edit',
+  name: 'editWord',
   components: {
     WordForm
   },

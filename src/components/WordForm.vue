@@ -28,7 +28,7 @@
 <script>
 import Word from '../word.js'
 export default {
-  name: 'wordform',
+  name: 'wordForm',
   props: {
     buttonText: String
   },

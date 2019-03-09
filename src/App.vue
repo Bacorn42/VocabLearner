@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <router-view :words="words"></router-view>
+   <router-view :words="words" :sets="sets"></router-view>
   </div>
 </template>
 
@@ -10,11 +10,13 @@ export default {
   name: 'app',
   data() {
     return {
-      words: [
-        new Word('This word is a greeting', ['hello', 'hi', 'yo']), 
-        new Word('How is "dog" in German?', ['Hund'])
-        ]
+      words: [],
+      sets: []
     }
   },
+  created() {
+    for(let i = 0; i < 20; i++)
+      this.words.push(new Word('clue' + i, ['ans1', 'ans2']))
+  }
 }
 </script>

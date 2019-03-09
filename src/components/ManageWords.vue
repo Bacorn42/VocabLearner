@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <router-link to="/"><button class="btn btn-outline-primary mt-3">Back</button></router-link> <br>
-    <router-link to="/add"><button class="btn btn-outline-primary mt-3">Add</button></router-link>
+    <router-link to="/manageWords/add"><button class="btn btn-outline-primary mt-3">Add</button></router-link>
     <div class="container mt-3">
       <WordSearch :words="words"></WordSearch>
     </div>
@@ -9,7 +9,7 @@
       <p><b>Clue: {{ managedWord.clue }}</b></p>
       <p>Possible answers:</p>
       <div class="border rounded p-2 mb-1" v-for="(answer, index) in managedWord.answers" v-bind:key="index">{{ answer }}</div>
-      <router-link :to="'/edit/' + managedIndex"><button class="btn btn-outline-primary">Edit</button></router-link>
+      <router-link :to="'/manageWords/edit/' + managedIndex"><button class="btn btn-outline-primary">Edit</button></router-link>
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@
 <script>
 import WordSearch from './WordSearch.vue'
 export default {
-  name: 'manage',
+  name: 'manageWords',
   components: {
     WordSearch
   },
