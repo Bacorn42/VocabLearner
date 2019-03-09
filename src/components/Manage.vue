@@ -9,7 +9,7 @@
       <p><b>Clue: {{ managedWord.clue }}</b></p>
       <p>Possible answers:</p>
       <div class="border rounded p-2 mb-1" v-for="(answer, index) in managedWord.answers" v-bind:key="index">{{ answer }}</div>
-      <button class="btn btn-outline-primary">Edit</button>
+      <router-link :to="'/edit/' + managedIndex"><button class="btn btn-outline-primary">Edit</button></router-link>
     </div>
   </div>
 </template>

@@ -63,6 +63,11 @@ export default {
       this.answers = []
       this.clue = ""
       this.answer = ""
+    },
+    setForm(word) {
+      this.clue = word.clue
+      for(let answer of word.answers)
+        this.answers.push(answer)
     }
   }
 }
