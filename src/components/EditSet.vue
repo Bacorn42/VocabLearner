@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
-    <router-link to="/manageSets"><button class="btn btn-outline-primary mt-3 mb-3">Back</button></router-link>
+  <div class="container mt-3">
+    <h1 class="page-header">Edit Set</h1>
+    <router-link to="/manageSets"><button class="btn btn-outline-primary mb-3">Back</button></router-link>
     <div v-for="(error, index) in errors" v-bind:key="index" class="alert alert-danger">{{ error }}</div>
     <div class="alert alert-success" v-if="success">Edited set!</div>
     <p>Edit the set!</p>

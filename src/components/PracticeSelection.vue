@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <router-link to="/"><button class="btn btn-outline-primary mt-3">Back</button></router-link> <br>
+  <div class="container mt-3">
+    <h1 class="page-header">Practice</h1>
     <p>Choose your set:</P>
     <SetSearch :sets="sets"></SetSearch>
   </div>

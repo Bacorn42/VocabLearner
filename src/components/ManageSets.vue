@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <router-link to="/"><button class="btn btn-outline-primary mt-3">Back</button></router-link> <br>
-    <router-link to="/manageSets/add"><button class="btn btn-outline-primary mt-3">Add</button></router-link>
+  <div class="container mt-3">
+    <h1 class="page-header">Manage Sets</h1>
+    <router-link to="/manageSets/add"><button class="btn btn-outline-primary">Add</button></router-link>
     <div class="container mt-3">
       <SetSearch :sets="sets"></SetSearch>
     </div>

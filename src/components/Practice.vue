@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
-    <router-link to="/practice"><button class="btn btn-outline-primary mt-3 mb-3">Back</button></router-link>
+  <div class="container mt-3">
+    <h1 class="page-header">Practice</h1>
+    <router-link to="/practice"><button class="btn btn-outline-primary mb-3">Back</button></router-link>
     <div v-if="tries < 3" class="alert alert-danger">Incorrect! You have {{ tries }} tries left.</div>
     <div v-if="failure" class="alert alert-danger">
       You are out of tries! The correct answers were:
